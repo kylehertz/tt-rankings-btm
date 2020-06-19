@@ -130,8 +130,9 @@ def upload_to_gsheets(sheet, ranks, rank_sheet):
 
     value_cells = worksheet.range(2, 2, len(ranks) + 1, 2)
     for cell, val in zip(value_cells, ranks.values):
-        cell.value = val
-
+        # cell.value = val
+        cell.value = int(val)
+    
     worksheet.update_cells(player_cells + value_cells)
 
 
