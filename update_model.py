@@ -32,7 +32,8 @@ def extract_game_data(sheet, sheet_name):
     assert all(c in df.columns for c in ['Date', 'Player A', 'Player B', 'Wins A', 'Wins B']), \
         'Expecting columns Date, Player A, Player B, Wins A, Wins B'
 
-    df['Date'] = df['Date'].astype(datetime)
+    # df['Date'] = df['Date'].astype(datetime)
+    df['Date'] = pd.to_datetime(df['Date'])
     df['Wins A'] = df['Wins A'].astype(int)
     df['Wins B'] = df['Wins B'].astype(int)
 
