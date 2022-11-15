@@ -1,3 +1,4 @@
 creds.json
 update.sh
-.idea/
+.idea
+.idea/*
