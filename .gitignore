@@ -4,3 +4,4 @@ update.sh
 ./.idea/*
 */.idea
 **/.idea
+.idea/*
